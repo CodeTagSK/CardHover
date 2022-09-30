@@ -1,0 +1,61 @@
+body {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 0.2fr 1fr 0.2fr;
+	place-items: center;
+}
+
+#card {
+	width: 40%;
+	height: 300px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	display: grid;
+	place-items: center;
+	transition: 1s;
+	cursor: pointer;
+}
+
+#card:hover {
+	transform: scale(1.2);
+	border-radius: 50%;
+}
+
+.heart {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	transform: rotate(-45deg);
+	animation: 400ms blink infinite alternate;
+}
+
+@keyframes blink {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.heart::before,
+.heart::after {
+	content: "";
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.heart::before {
+	top: -50px;
+}
+
+.heart::after {
+	left: 50px;
+}

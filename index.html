@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Coding with Steve</title>
+</head>
+<body>
+    <h1>We</h1>
+<div id="card">
+    <div class="heart">
+
+    </div>
+</div>
+<h1>Peace</h1>
+
+<script>
+    const pageBG = document.body
+    const card = document.getElementById('card')
+    card.addEventListener('mouseover', () => {
+        pageBG.style.background = 'linear-gradient(#ddd6f3, #faaca8)'
+    })
+
+    card.addEventListener('mouseout', () => {
+        pageBG.style.background = 'black'
+    })
+</script>
+</body>
+</html>
